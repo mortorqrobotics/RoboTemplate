@@ -49,24 +49,41 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void autonomousInit() {
-		autonomousCommand = new DriveForwardMP(1.5, 10);
-		autonomousCommand.start();
+		//autonomousCommand = new DriveForwardMP(1.5, 10);
+		//autonomousCommand.start();
+
+    	SmartDashboard.putNumber("left Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
+    	SmartDashboard.putNumber("right Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
 	}
 
 
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
-		//driveTrain.setSpeed(0.5);
+		
+		driveTrain.setSpeed(0.3);
+		// setSpeedPID
 	}
 
 	@Override
 	public void teleopInit() {
+		Robot.driveTrain.resetEncoders();
 	}
 
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		
+//		Robot.driveTrain.setSpeedPID(0.2);
+		
+    	SmartDashboard.putNumber("left Speed (Ticks): ", Robot.driveTrain.leftGearbox.getEncoderTicks());
+    	SmartDashboard.putNumber("right Speed (Ticks): ", Robot.driveTrain.rightGearbox.getEncoderTicks());
+    	
+    	SmartDashboard.putNumber("left Speed (Rate): ", Robot.driveTrain.leftGearbox.getEncoderRate());
+    	SmartDashboard.putNumber("right Speed (Rate): ", Robot.driveTrain.rightGearbox.getEncoderRate());
+    	
+    	
+    	// originally rate (no ticks)
 	}
 
 

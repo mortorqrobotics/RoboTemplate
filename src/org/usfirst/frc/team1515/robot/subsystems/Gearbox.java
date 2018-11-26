@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Gearbox extends Subsystem {
 	
@@ -19,10 +20,10 @@ public class Gearbox extends Subsystem {
 	private PIDController pidController;
 
 	final double K_P = 1.0;
-	final double K_I = 0.001;
+	final double K_I = 0.000;
 	final double K_D = 0.0;
 	
-	final int MAX_ENCODER_RATE = 15000;
+	final int MAX_ENCODER_RATE = 10;
 	
 	public Gearbox(int[] talonPorts, Pair<Integer> encoderPorts) {
 		motorModule = new MotorModule(talonPorts);
@@ -50,6 +51,8 @@ public class Gearbox extends Subsystem {
 	
 	public void setSpeed(double speed) {
 		motorModule.setSpeed(speed);
+		// TODO: Remove this
+		SmartDashboard.putNumber("Right Sending speed 2", speed);
 	}
 	
 	public double getEncoderRate() {

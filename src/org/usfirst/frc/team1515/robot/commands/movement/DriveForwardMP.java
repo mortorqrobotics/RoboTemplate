@@ -43,6 +43,8 @@ public class DriveForwardMP extends Command {
     	//speed = (speed > 1) ? 1 : speed;
 
     	SmartDashboard.putNumber("Speed: ", speed);
+    	SmartDashboard.putNumber("left Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
+    	SmartDashboard.putNumber("right Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
     	Robot.driveTrain.setSpeed(speed);
     }
 

@@ -6,6 +6,7 @@ import org.usfirst.frc.team1515.robot.commands.JoystickDrive;
 import org.usfirst.frc.team1515.robot.util.Pair;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class DriveTrain extends Subsystem {
 	
@@ -23,7 +24,7 @@ public class DriveTrain extends Subsystem {
 	// change sign to change direction
 	private int factor = -1; 
 
-	public boolean isPID = true;
+	public boolean isPID = false;
 	
 	public DriveTrain(int[] leftTalonPorts, int[] rightTalonPorts, 
 		Pair<Integer> leftEncoderPorts, Pair<Integer> rightEncoderPorts
@@ -34,24 +35,37 @@ public class DriveTrain extends Subsystem {
 	
 	public void setSpeed(double speed) {
 		leftGearbox.setSpeed(speed * factor);
-		rightGearbox.setSpeed(-speed * factor
-//				* trim
-				);
+		rightGearbox.setSpeed(-speed * factor);
+		sendingForwardSpeed(speed);
 	}
 	
 	public void setSpeedPID(double speed) {
 		leftGearbox.setSpeedPID(speed * factor);
 		rightGearbox.setSpeedPID(-speed * factor);
+		sendingForwardSpeed(speed);
+	}
+	
+	public void sendingForwardSpeed(double speed) {
+		// Speed of going forwards and backwards
+		SmartDashboard.putNumber("Forward Sending speed", speed);
+	}
+	
+	public void sendingRotationalSpeed(double leftSpeed, double rightSpeed) {
+		// Speed of turning left and right
+		SmartDashboard.putNumber("Left Sending speed", leftSpeed);
+		SmartDashboard.putNumber("Right Sending speed", rightSpeed);
 	}
 	
 	public void setSpeeds(double leftSpeed, double rightSpeed) {
-		leftGearbox.setSpeed(leftSpeed * factor);
-		rightGearbox.setSpeed(-rightSpeed * factor * trim);
+		leftGearbox.setSpeed(-leftSpeed * factor);
+		rightGearbox.setSpeed(rightSpeed * factor);
+		sendingRotationalSpeed(leftSpeed, rightSpeed);
 	}
 
 	public void setSpeedsPID(double leftSpeed, double rightSpeed) {
-		leftGearbox.setSpeedPID(leftSpeed * factor);
-		rightGearbox.setSpeedPID(-rightSpeed * factor);
+		leftGearbox.setSpeedPID(-leftSpeed * factor);
+		rightGearbox.setSpeedPID(rightSpeed * factor);
+		sendingRotationalSpeed(leftSpeed, rightSpeed);
 	}
 	
 	public void stop() {
