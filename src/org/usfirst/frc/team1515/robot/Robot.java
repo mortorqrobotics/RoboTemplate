@@ -49,8 +49,8 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void autonomousInit() {
-		//autonomousCommand = new DriveForwardMP(1.5, 10);
-		//autonomousCommand.start();
+		// useless: autonomousCommand = new DriveForwardMP(1.5, 10);
+		// useless: autonomousCommand.start();
 
     	SmartDashboard.putNumber("left Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
     	SmartDashboard.putNumber("right Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
@@ -81,9 +81,6 @@ public class Robot extends IterativeRobot {
     	
     	SmartDashboard.putNumber("left Speed (Rate): ", Robot.driveTrain.leftGearbox.getEncoderRate());
     	SmartDashboard.putNumber("right Speed (Rate): ", Robot.driveTrain.rightGearbox.getEncoderRate());
-    	
-    	
-    	// originally rate (no ticks)
 	}
 
 
