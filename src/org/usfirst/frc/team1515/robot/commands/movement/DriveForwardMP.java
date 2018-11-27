@@ -13,8 +13,7 @@ public class DriveForwardMP extends Command {
 	public static final int MAX_SPEED = 1;
 	public static final int MIN_SPEED = 0;
 
-	
-	// Distance in Feet
+//	in feet
     public DriveForwardMP(double distanceInFeet, double timeInSeconds) {
         requires(Robot.driveTrain);
         this.distance = distanceInFeet;
@@ -38,9 +37,10 @@ public class DriveForwardMP extends Command {
     	} else {
     		speed = velocity;
     	} 
-    	
-    	//speed = (speed < 0) ? 0 : speed;
-    	//speed = (speed > 1) ? 1 : speed;
+   
+//	don't need this
+//	speed = (speed < 0) ? 0 : speed;
+//	speed = (speed > 1) ? 1 : speed;
 
     	SmartDashboard.putNumber("Speed: ", speed);
     	SmartDashboard.putNumber("left Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
