@@ -24,13 +24,10 @@ public class Robot extends IterativeRobot {
 	public static Command autonomousCommand;
 	public static Command testCommand;
 	
-// Can Kian push this???
-	
 	@Override
 	public void robotInit() {		
 		driveTrain = new DriveTrain(RobotMap.LEFT_MOTOR_PORTS, RobotMap.RIGHT_MOTOR_PORTS,
-			RobotMap.LEFT_ENCODER_PORTS, RobotMap.RIGHT_ENCODER_PORTS
-		);
+			RobotMap.LEFT_ENCODER_PORTS, RobotMap.RIGHT_ENCODER_PORTS);
 		
 		driveStick = new Joystick(Controls.DRIVE_STICK);
 		manipStick = new Joystick(Controls.MANIPULATOR_STICK);
@@ -41,7 +38,6 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void disabledInit() {
-
 	}
 
 	@Override
@@ -58,13 +54,12 @@ public class Robot extends IterativeRobot {
     	SmartDashboard.putNumber("right Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
 	}
 
-
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
 		
 		driveTrain.setSpeed(0.3);
-		// setSpeedPID
+//		used to be setSpeedPID
 	}
 
 	@Override
@@ -76,7 +71,7 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		
-//		Robot.driveTrain.setSpeedPID(0.2);
+//		removed Robot.driveTrain.setSpeedPID(0.2);
 		
     	SmartDashboard.putNumber("left Speed (Ticks): ", Robot.driveTrain.leftGearbox.getEncoderTicks());
     	SmartDashboard.putNumber("right Speed (Ticks): ", Robot.driveTrain.rightGearbox.getEncoderTicks());
@@ -84,7 +79,6 @@ public class Robot extends IterativeRobot {
     	SmartDashboard.putNumber("left Speed (Rate): ", Robot.driveTrain.leftGearbox.getEncoderRate());
     	SmartDashboard.putNumber("right Speed (Rate): ", Robot.driveTrain.rightGearbox.getEncoderRate());
 	}
-
 
 	@Override
 	public void testInit() {
