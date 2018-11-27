@@ -4,9 +4,6 @@ import org.usfirst.frc.team1515.robot.commands.movement.DriveForward;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
 
-/**
- *
- */
 public class IntegrationTestRoutine extends CommandGroup {
 
     public IntegrationTestRoutine() {
