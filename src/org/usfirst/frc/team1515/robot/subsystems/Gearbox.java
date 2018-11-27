@@ -33,6 +33,7 @@ public class Gearbox extends Subsystem {
 		encoder.setMinRate(10);
 		encoder.setDistancePerPulse(RobotMap.WHEEL_CIRCUMFERENCE / RobotMap.TICKS_PER_REV);
 		encoder.setSamplesToAverage(10);
+//		don't need this
 //		encoder.setReverseDirection(true);
 		encoder.reset();
 		
@@ -51,7 +52,7 @@ public class Gearbox extends Subsystem {
 	
 	public void setSpeed(double speed) {
 		motorModule.setSpeed(speed);
-		// TODO: Remove this
+// 		play around with this
 		SmartDashboard.putNumber("Right Sending speed 2", speed);
 	}
 	
