@@ -24,6 +24,7 @@ public class Robot extends IterativeRobot {
 	public static Command autonomousCommand;
 	public static Command testCommand;
 	
+// Can Kian push this???
 	
 	@Override
 	public void robotInit() {		
