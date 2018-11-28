@@ -11,5 +11,6 @@ public class RobotMap {
 	public static final Pair<Integer> RIGHT_ENCODER_PORTS = new Pair<Integer>(2, 3);
 
 	public static final int TICKS_PER_REV = 2700;
-	public static final double WHEEL_CIRCUMFERENCE = Math.PI * 6.25; //inches
+//	in inches
+	public static final double WHEEL_CIRCUMFERENCE = Math.PI * 6.25;
 }
