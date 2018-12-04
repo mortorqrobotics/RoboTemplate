@@ -14,7 +14,6 @@ public class Controls {
 	public static final int THROTTLE = 2;
 	public static final int TWIST = 0;
 	
-	// 0
 	public static final int TURN_SPEED = 6;
 
 	public static final Button SHIFT_TO_HIGH_GEAR = new JoystickButton(Robot.driveStick, 3);
