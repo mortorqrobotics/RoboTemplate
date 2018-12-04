@@ -74,12 +74,12 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public void reverse() {
-		factor *= 1;
+		factor *= -1;
 	}
 	
 	public void drive() {
 		double forward = Robot.driveStick.getRawAxis(Controls.Y_AXIS);
-		double twist = Robot.driveStick.getRawAxis(Controls.TWIST);
+		double twist = -Robot.driveStick.getRawAxis(Controls.TWIST);
 		double throttle = Robot.driveStick.getRawAxis(Controls.THROTTLE);
 		double turnSpeed = Robot.driveStick.getRawAxis(Controls.TURN_SPEED);
 		
