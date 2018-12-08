@@ -53,7 +53,7 @@ public class Gearbox extends Subsystem {
 	public void setSpeed(double speed) {
 		motorModule.setSpeed(speed);
 // 		play around with this
-		SmartDashboard.putNumber("Right Sending speed 2", speed);
+//		SmartDashboard.putNumber("Right Sending speed 2", speed);
 	}
 	
 	public double getEncoderRate() {
