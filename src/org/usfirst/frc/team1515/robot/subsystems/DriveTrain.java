@@ -58,14 +58,14 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public void setSpeeds(double leftSpeed, double rightSpeed) {
-		leftGearbox.setSpeed(-leftSpeed * factor);
-		rightGearbox.setSpeed(rightSpeed * factor);
+		leftGearbox.setSpeed(leftSpeed * factor);
+		rightGearbox.setSpeed(-rightSpeed * factor);
 		sendingRotationalSpeed(leftSpeed, rightSpeed);
 	}
 
 	public void setSpeedsPID(double leftSpeed, double rightSpeed) {
-		leftGearbox.setSpeedPID(-leftSpeed * factor);
-		rightGearbox.setSpeedPID(rightSpeed * factor);
+		leftGearbox.setSpeedPID(leftSpeed * factor);
+		rightGearbox.setSpeedPID(-rightSpeed * factor);
 		sendingRotationalSpeed(leftSpeed, rightSpeed);
 	}
 	
@@ -89,7 +89,7 @@ public class DriveTrain extends Subsystem {
 		turnSpeed = (1 + turnSpeed)/2;
 		throttle = (throttle - 1)/2;
 		forward *= throttle;
-		twist *= -turnSpeed;
+		twist *= turnSpeed;
 		
 		double y = Math.abs(forward);
 		double x = Math.abs(twist);
