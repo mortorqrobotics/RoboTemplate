@@ -11,7 +11,8 @@ public class Controls {
 	
 	public static final int X_AXIS = 0;
 	public static final int Y_AXIS = 1;
-// 	work on throttle for R Trigger
+// 	work on Ali's throttle idea for R Trigger button
+//	(provides max energy when held)
 	public static final int THROTTLE = 3;
 	public static final int TWIST = 4;
 	
