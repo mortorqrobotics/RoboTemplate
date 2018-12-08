@@ -4,6 +4,7 @@ import org.usfirst.frc.team1515.robot.util.Pair;
 
 public class RobotMap {
 	
+//	plz try not to change to change values
 	public static final int[] LEFT_MOTOR_PORTS = {32, 34};
 	public static final int[] RIGHT_MOTOR_PORTS = {31, 35};
 
