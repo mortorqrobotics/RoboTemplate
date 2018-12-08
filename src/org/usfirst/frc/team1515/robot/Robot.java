@@ -48,7 +48,7 @@ public class Robot extends IterativeRobot {
 	public void autonomousInit() {
 		// useless: autonomousCommand = new DriveForwardMP(1.5, 10);
 		// useless: autonomousCommand.start();
-
+		
     	SmartDashboard.putNumber("left Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
     	SmartDashboard.putNumber("right Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
 	}
@@ -56,7 +56,6 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
-		
 		driveTrain.setSpeed(0.3);
 //		used to be setSpeedPID
 	}
