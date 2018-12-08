@@ -46,17 +46,19 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void autonomousInit() {
-		// useless: autonomousCommand = new DriveForwardMP(1.5, 10);
-		// useless: autonomousCommand.start();
-		
-    	SmartDashboard.putNumber("L Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
-    	SmartDashboard.putNumber("R Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
+// 		useless: autonomousCommand = new DriveForwardMP(1.5, 10);
+// 		useless: autonomousCommand.start();
+	
+//	work-in-progress code to monitor autnomous speeds
+//   	SmartDashboard.putNumber("L Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
+//    	SmartDashboard.putNumber("R Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
 	}
 
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
 		driveTrain.setSpeed(0.3);
+//		currently a work-in-progress
 //		used to be setSpeedPID
 	}
 
@@ -70,6 +72,8 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		
 //		removed Robot.driveTrain.setSpeedPID(0.2);
+		
+//		use this code to test how straight robot goes
 //		Robot.driveTrain.setSpeed(0.3);
 		
     	SmartDashboard.putNumber("L Speed (Ticks): ", Robot.driveTrain.leftGearbox.getEncoderTicks());
