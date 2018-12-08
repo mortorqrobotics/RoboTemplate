@@ -71,7 +71,6 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		
 //		removed Robot.driveTrain.setSpeedPID(0.2);
-		
 //		Robot.driveTrain.setSpeed(-0.2);
 		
     	SmartDashboard.putNumber("left Speed (Ticks): ", Robot.driveTrain.leftGearbox.getEncoderTicks());
