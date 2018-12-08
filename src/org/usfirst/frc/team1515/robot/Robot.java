@@ -49,8 +49,8 @@ public class Robot extends IterativeRobot {
 		// useless: autonomousCommand = new DriveForwardMP(1.5, 10);
 		// useless: autonomousCommand.start();
 		
-    	SmartDashboard.putNumber("left Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
-    	SmartDashboard.putNumber("right Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
+    	SmartDashboard.putNumber("L Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
+    	SmartDashboard.putNumber("R Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
 	}
 
 	@Override
@@ -72,11 +72,11 @@ public class Robot extends IterativeRobot {
 //		removed Robot.driveTrain.setSpeedPID(0.2);
 //		Robot.driveTrain.setSpeed(0.3);
 		
-    	SmartDashboard.putNumber("left Speed (Ticks): ", Robot.driveTrain.leftGearbox.getEncoderTicks());
-    	SmartDashboard.putNumber("right Speed (Ticks): ", Robot.driveTrain.rightGearbox.getEncoderTicks());
+    	SmartDashboard.putNumber("L Speed (Ticks): ", Robot.driveTrain.leftGearbox.getEncoderTicks());
+    	SmartDashboard.putNumber("R Speed (Ticks): ", Robot.driveTrain.rightGearbox.getEncoderTicks());
     	
-    	SmartDashboard.putNumber("left Speed (Rate): ", Robot.driveTrain.leftGearbox.getEncoderRate());
-    	SmartDashboard.putNumber("right Speed (Rate): ", Robot.driveTrain.rightGearbox.getEncoderRate());
+    	SmartDashboard.putNumber("L Speed (Rate): ", Robot.driveTrain.leftGearbox.getEncoderRate());
+    	SmartDashboard.putNumber("R Speed (Rate): ", Robot.driveTrain.rightGearbox.getEncoderRate());
 	}
 
 	@Override
