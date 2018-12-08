@@ -18,11 +18,8 @@ public class DriveTrain extends Subsystem {
 
 	private static final double DEADBAND_FORWARD = 0.15;
 	private static final double DEADBAND_TWIST = 0.05;
-	
-//	bro what is this ???
-//	private static double trim = 0.825;
+//	outdated: private static double trim = 0.825;
 
-//	change sign to change direction
 	private int factor = -1; 
 
 	public boolean isPID = false;
@@ -47,7 +44,7 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public void sendingForwardSpeed(double speed) {
-//		speed of going forwards and backwards
+//		speed of going forward and backwards
 		SmartDashboard.putNumber("F Speed (Theoretical)", speed);
 	}
 	
