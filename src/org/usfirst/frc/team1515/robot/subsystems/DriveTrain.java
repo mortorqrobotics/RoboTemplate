@@ -78,6 +78,12 @@ public class DriveTrain extends Subsystem {
 		double forward = Robot.driveStick.getRawAxis(Controls.Y_AXIS);
 		double twist = -Robot.driveStick.getRawAxis(Controls.TWIST);
 		double throttle = Robot.driveStick.getRawAxis(Controls.THROTTLE);
+		
+//		test new drift code below 
+
+//		drift #1
+		double drift = Robot.driveStick.getRawAxis(Controls.DRIFT);
+		
 		double turnSpeed = Robot.driveStick.getRawAxis(Controls.TURN_SPEED);
 		
 		forward = Math.abs(forward) > DEADBAND_FORWARD ? forward : 0;
@@ -85,7 +91,15 @@ public class DriveTrain extends Subsystem {
 		
 		turnSpeed = (1 + turnSpeed)/2;
 		throttle = (throttle - 1)/2;
+		
+//		dirft #2 (could be -1 depending on if robot accelerates or decelerates)
+		drift = (1 + drift)/2;
+			
 		forward *= throttle;
+		
+//		drift #3 (might have to use if/else statement if (forward *= throttle;) & (forward *= drift;) don't work together
+		forward *= drift;
+		
 		twist *= turnSpeed;
 		
 		double y = Math.abs(forward);
@@ -99,6 +113,8 @@ public class DriveTrain extends Subsystem {
 			left *= -1;
 			right *= -1;
 			twist *= -1;
+//			drift code #2
+			drift *= -1;
 		}
 		if (twist > 0) {
 			double temp = left;
