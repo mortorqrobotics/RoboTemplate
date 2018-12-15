@@ -14,11 +14,12 @@ public class Controls {
 	
 // 	work on Ali's throttle idea for R Trigger button
 //	(provides max energy when held)
-	public static final int THROTTLE = 3;
+//	make sure THROTTLE value is correct
+	public static final int THROTTLE = 5;
+	public static final int DRIFT = 3
 
 //	twisting/turning now set to seperate thumbstick
 	public static final int TWIST = 4;
-	
 	public static final int TURN_SPEED = 6;
 
 	public static final Button SHIFT_TO_HIGH_GEAR = new JoystickButton(Robot.driveStick, 3);
