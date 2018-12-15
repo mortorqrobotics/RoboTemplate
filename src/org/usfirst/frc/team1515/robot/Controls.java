@@ -12,13 +12,13 @@ public class Controls {
 	public static final int X_AXIS = 0;
 	public static final int Y_AXIS = 1;
 	
-// 	work on Ali's throttle idea for R Trigger button
-//	(provides max energy when held)
 //	make sure THROTTLE value is correct
 	public static final int THROTTLE = 5;
+	
+//	work on new drift code 
 	public static final int DRIFT = 3
 
-//	twisting/turning now set to seperate thumbstick
+//	twisting/turning now set to seperate thumbstick (change it here)
 	public static final int TWIST = 4;
 	public static final int TURN_SPEED = 6;
 
