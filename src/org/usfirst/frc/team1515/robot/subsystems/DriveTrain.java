@@ -86,7 +86,6 @@ public class DriveTrain extends Subsystem {
 		
 		turnSpeed = (1 + turnSpeed)/2;
 		throttle = (throttle - 1)/2;
-			
 		forward *= throttle;
 		twist *= turnSpeed;
 		

@@ -12,6 +12,7 @@ public class Controls {
 	public static final int X_AXIS = 0;
 	public static final int Y_AXIS = 1;
 	
+	// "drift" feature
 	public static final int THROTTLE = 3;
 	
 	public static final int TWIST = 4;
