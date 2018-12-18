@@ -76,9 +76,10 @@ public class DriveTrain extends Subsystem {
 	
 	public void drive() {
 		double forward = Robot.driveStick.getRawAxis(Controls.Y_AXIS);
-		double twist = -Robot.driveStick.getRawAxis(Controls.TWIST);
+		double twist = Robot.driveStick.getRawAxis(Controls.TWIST);
 		double throttle = Robot.driveStick.getRawAxis(Controls.THROTTLE);	
 		double turnSpeed = Robot.driveStick.getRawAxis(Controls.TURN_SPEED);
+		
 		
 		forward = Math.abs(forward) > DEADBAND_FORWARD ? forward : 0;
 		twist = Math.abs(twist) > DEADBAND_TWIST ? twist : 0;
@@ -87,7 +88,6 @@ public class DriveTrain extends Subsystem {
 		throttle = (throttle - 1)/2;
 			
 		forward *= throttle;
-		forward *= drift;
 		twist *= turnSpeed;
 		
 		double y = Math.abs(forward);
@@ -107,6 +107,9 @@ public class DriveTrain extends Subsystem {
 			left = right;
 			right = temp;
 		}
+		
+		SmartDashboard.putNumber("Left speed", left);
+		SmartDashboard.putNumber("Right Speed", right);
 		
 		if (isPID) {
 			setSpeedsPID(left, right);

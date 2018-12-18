@@ -14,14 +14,11 @@ public class Controls {
 	
 	public static final int THROTTLE = 3;
 	
-	public static final int DRIFT = 3
-
-//	twisting/turning now set to seperate thumbstick (change it here)
 	public static final int TWIST = 4;
 	public static final int TURN_SPEED = 6;
 
-	public static final Button SHIFT_TO_HIGH_GEAR = new JoystickButton(Robot.driveStick, 3);
-	public static final Button SHIFT_TO_LOW_GEAR = new JoystickButton(Robot.driveStick, 4);
-	public static final Button TOGGLE_PID = new JoystickButton(Robot.driveStick, 1);
-	public static final Button REVERSE_DRIVETRAIN = new JoystickButton(Robot.manipStick, 7);
+	public static final Button SHIFT_TO_HIGH_GEAR = new JoystickButton(Robot.driveStick, -3);
+	public static final Button SHIFT_TO_LOW_GEAR = new JoystickButton(Robot.driveStick, -4);
+	public static final Button TOGGLE_PID = new JoystickButton(Robot.driveStick, -1);
+	public static final Button REVERSE_DRIVETRAIN = new JoystickButton(Robot.manipStick, -7);
 }

@@ -1,5 +1,6 @@
 package org.usfirst.frc.team1515.robot.subsystems;
 
+import org.usfirst.frc.team1515.robot.Controls;
 import org.usfirst.frc.team1515.robot.Robot;
 import org.usfirst.frc.team1515.robot.RobotMap;
 import org.usfirst.frc.team1515.robot.util.MotorModule;

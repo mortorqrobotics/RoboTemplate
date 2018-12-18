@@ -57,7 +57,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void autonomousPeriodic() {
 		Scheduler.getInstance().run();
-		driveTrain.setSpeed(0.3);
+		driveTrain.setSpeedPID(0.8);
 //		currently a work-in-progress
 //		used to be setSpeedPID
 	}
@@ -76,11 +76,12 @@ public class Robot extends IterativeRobot {
 //		use this code to test how straight robot goes
 //		Robot.driveTrain.setSpeed(0.3);
 		
-    	SmartDashboard.putNumber("L Speed (Ticks): ", Robot.driveTrain.leftGearbox.getEncoderTicks());
-    	SmartDashboard.putNumber("R Speed (Ticks): ", Robot.driveTrain.rightGearbox.getEncoderTicks());
-    	
-    	SmartDashboard.putNumber("L Speed (Rate): ", Robot.driveTrain.leftGearbox.getEncoderRate());
-    	SmartDashboard.putNumber("R Speed (Rate): ", Robot.driveTrain.rightGearbox.getEncoderRate());
+//    	SmartDashboard.putNumber("L Speed (Ticks): ", Robot.driveTrain.leftGearbox.getEncoderTicks());
+//    	SmartDashboard.putNumber("R Speed (Ticks): ", Robot.driveTrain.rightGearbox.getEncoderTicks());
+//    	
+//    	SmartDashboard.putNumber("L Speed (Rate): ", Robot.driveTrain.leftGearbox.getEncoderRate());
+//    	SmartDashboard.putNumber("R Speed (Rate): ", Robot.driveTrain.rightGearbox.getEncoderRate());
+		
 	}
 
 	@Override
