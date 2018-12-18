@@ -12,10 +12,8 @@ public class Controls {
 	public static final int X_AXIS = 0;
 	public static final int Y_AXIS = 1;
 	
-//	make sure THROTTLE value is correct
-	public static final int THROTTLE = 5;
+	public static final int THROTTLE = 3;
 	
-//	work on new drift code 
 	public static final int DRIFT = 3
 
 //	twisting/turning now set to seperate thumbstick (change it here)
