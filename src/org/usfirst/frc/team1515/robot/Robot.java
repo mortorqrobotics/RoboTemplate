@@ -4,7 +4,9 @@ import org.usfirst.frc.team1515.robot.commands.IntegrationTestRoutine;
 import org.usfirst.frc.team1515.robot.commands.movement.DriveForwardMP;
 import org.usfirst.frc.team1515.robot.subsystems.DriveTrain;
 
+import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.ADXRS450_Gyro;
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
@@ -31,6 +33,9 @@ public class Robot extends IterativeRobot {
 		driveStick = new Joystick(Controls.DRIVE_STICK);
 		manipStick = new Joystick(Controls.MANIPULATOR_STICK);
 		gyro = new ADXRS450_Gyro();
+		
+		UsbCamera cam0 = CameraServer.getInstance().startAutomaticCapture(0);
+		UsbCamera cam1 = CameraServer.getInstance().startAutomaticCapture(1);
 
 		oi = new OI();
 	}
