@@ -18,7 +18,6 @@ public class DriveTrain extends Subsystem {
 
 	private static final double DEADBAND_FORWARD = 0.15;
 	private static final double DEADBAND_TWIST = 0.05;
-//	outdated: private static double trim = 0.825;
 
 	private int factor = -1; 
 
