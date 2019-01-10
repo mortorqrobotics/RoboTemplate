@@ -44,7 +44,7 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public void sendingForwardSpeed(double speed) {
-//		speed of going forward and backwards
+//		speed of going forward and backward
 		SmartDashboard.putNumber("F Speed (Theoretical):", speed);
 	}
 	

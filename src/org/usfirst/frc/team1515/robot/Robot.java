@@ -54,7 +54,7 @@ public class Robot extends IterativeRobot {
 // 		useless: autonomousCommand = new DriveForwardMP(1.5, 10);
 // 		useless: autonomousCommand.start();
 	
-//	work-in-progress code to monitor autnomous speeds
+//	work-in-progress code to monitor autonomous speeds
 //   	SmartDashboard.putNumber("L Speed: ", Robot.driveTrain.leftGearbox.getEncoderRate());
 //    	SmartDashboard.putNumber("R Speed: ", Robot.driveTrain.rightGearbox.getEncoderRate());
 	}
